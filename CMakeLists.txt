@@ -1,0 +1,87 @@
+cmake_minimum_required(VERSION 3.10.0)
+project(cgmlib VERSION 0.1.0 LANGUAGES C CXX)
+
+file(GLOB_RECURSE MY_SOURCES CONFIG_DEPENDS "${CMAKE_SOURCE_DIR}/src/*.cpp")
+
+add_library(cgmlib)
+target_include_directories(cgmlib PUBLIC "${CMAKE_SOURCE_DIR}/include/")
+target_sources(cgmlib PRIVATE "${MY_SOURCES}")
+
+enable_testing()
+
+add_executable(vec2add "${CMAKE_SOURCE_DIR}/tests/vec2/vec2add.cpp")
+target_link_libraries(vec2add cgmlib)
+
+add_test(
+    NAME vec2add
+    COMMAND $<TARGET_FILE:vec2add>
+)
+
+
+add_executable(vec2minus "${CMAKE_SOURCE_DIR}/tests/vec2/vec2minus.cpp")
+target_link_libraries(vec2minus cgmlib)
+
+add_test(
+    NAME vec2minus
+    COMMAND $<TARGET_FILE:vec2minus>
+)
+
+
+add_executable(vec2mul "${CMAKE_SOURCE_DIR}/tests/vec2/vec2mul.cpp")
+target_link_libraries(vec2mul cgmlib)
+
+add_test(
+    NAME vec2mul
+    COMMAND $<TARGET_FILE:vec2mul>
+)
+
+
+add_executable(vec2div "${CMAKE_SOURCE_DIR}/tests/vec2/vec2div.cpp")
+target_link_libraries(vec2div cgmlib)
+
+add_test(
+    NAME vec2div
+    COMMAND $<TARGET_FILE:vec2div>
+)
+
+
+add_executable(vec2eql "${CMAKE_SOURCE_DIR}/tests/vec2/vec2eql.cpp")
+target_link_libraries(vec2eql cgmlib)
+
+add_test(
+    NAME vec2eql
+    COMMAND $<TARGET_FILE:vec2eql>
+)
+
+add_executable(vec2neql "${CMAKE_SOURCE_DIR}/tests/vec2/vec2neql.cpp")
+target_link_libraries(vec2neql cgmlib)
+
+add_test(
+    NAME vec2neql
+    COMMAND $<TARGET_FILE:vec2neql>
+)
+
+add_executable(vec2len "${CMAKE_SOURCE_DIR}/tests/vec2/vec2len.cpp")
+target_link_libraries(vec2len cgmlib)
+
+add_test(
+    NAME vec2len
+    COMMAND $<TARGET_FILE:vec2len>
+)
+
+add_executable(vec2norm "${CMAKE_SOURCE_DIR}/tests/vec2/vec2norm.cpp")
+target_link_libraries(vec2norm cgmlib)
+
+add_test(
+    NAME vec2norm
+    COMMAND $<TARGET_FILE:vec2norm>
+)
+
+
+add_executable(vec2dot "${CMAKE_SOURCE_DIR}/tests/vec2/vec2dot.cpp")
+target_link_libraries(vec2dot cgmlib)
+
+add_test(
+    NAME vec2dot
+    COMMAND $<TARGET_FILE:vec2dot>
+)
