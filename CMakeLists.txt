@@ -85,3 +85,92 @@ add_test(
     NAME vec2dot
     COMMAND $<TARGET_FILE:vec2dot>
 )
+
+add_executable(vec3add "${CMAKE_SOURCE_DIR}/tests/vec3/vec3add.cpp")
+target_link_libraries(vec3add cgmlib)
+
+add_test(
+    NAME vec3add
+    COMMAND $<TARGET_FILE:vec3add>
+)
+
+
+add_executable(vec3minus "${CMAKE_SOURCE_DIR}/tests/vec3/vec3minus.cpp")
+target_link_libraries(vec3minus cgmlib)
+
+add_test(
+    NAME vec3minus
+    COMMAND $<TARGET_FILE:vec3minus>
+)
+
+
+add_executable(vec3mul "${CMAKE_SOURCE_DIR}/tests/vec3/vec3mul.cpp")
+target_link_libraries(vec3mul cgmlib)
+
+add_test(
+    NAME vec3mul
+    COMMAND $<TARGET_FILE:vec3mul>
+)
+
+
+add_executable(vec3div "${CMAKE_SOURCE_DIR}/tests/vec3/vec3div.cpp")
+target_link_libraries(vec3div cgmlib)
+
+add_test(
+    NAME vec3div
+    COMMAND $<TARGET_FILE:vec3div>
+)
+
+
+add_executable(vec3eql "${CMAKE_SOURCE_DIR}/tests/vec3/vec3eql.cpp")
+target_link_libraries(vec3eql cgmlib)
+
+add_test(
+    NAME vec3eql
+    COMMAND $<TARGET_FILE:vec3eql>
+)
+
+
+add_executable(vec3neql "${CMAKE_SOURCE_DIR}/tests/vec3/vec3neql.cpp")
+target_link_libraries(vec3neql cgmlib)
+
+add_test(
+    NAME vec3neql
+    COMMAND $<TARGET_FILE:vec3neql>
+)
+
+
+add_executable(vec3len "${CMAKE_SOURCE_DIR}/tests/vec3/vec3len.cpp")
+target_link_libraries(vec3len cgmlib)
+
+add_test(
+    NAME vec3len
+    COMMAND $<TARGET_FILE:vec3len>
+)
+
+
+add_executable(vec3norm "${CMAKE_SOURCE_DIR}/tests/vec3/vec3norm.cpp")
+target_link_libraries(vec3norm cgmlib)
+
+add_test(
+    NAME vec3norm
+    COMMAND $<TARGET_FILE:vec3norm>
+)
+
+
+add_executable(vec3dot "${CMAKE_SOURCE_DIR}/tests/vec3/vec3dot.cpp")
+target_link_libraries(vec3dot cgmlib)
+
+add_test(
+    NAME vec3dot
+    COMMAND $<TARGET_FILE:vec3dot>
+)
+
+
+add_executable(vec3cross "${CMAKE_SOURCE_DIR}/tests/vec3/vec3cross.cpp")
+target_link_libraries(vec3cross cgmlib)
+
+add_test(
+    NAME vec3cross
+    COMMAND $<TARGET_FILE:vec3cross>
+)

@@ -111,10 +111,19 @@ struct mat4 {
 
     mat4();
     mat4(float id);
+    mat4(
+        float m0,float m1,float m2,float m3,
+        float m4,float m5,float m6,float m7,
+        float m8,float m9,float m10,float m11,
+        float m12,float m13,float m14,float m15
+    );
 
     vec4 operator *(vec4 r);
     mat4 operator *(mat4 r);
     mat4& operator *=(mat4 r);
+
+    bool operator ==(mat4 r);
+    bool operator !=(mat4 r);
 
     friend std::ostream& operator<<(std::ostream &os,const mat4& val);
 };
