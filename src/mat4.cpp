@@ -100,7 +100,7 @@ std::ostream& operator<<(std::ostream &os,const mat4& val) {
             os<<val.v[i*4+j];
             if (j != 3) os<<',';
         }
-        os<<']\n';
+        os<<"]\n";
     }
     os<<"]";
     return os;
@@ -145,7 +145,7 @@ mat4 ortho(float left,float right,float top,float bot,float near,float far) {
 mat4 perspectiv(float fov,float aspect,float near,float far) {
     mat4 rez = mat4();
 
-    float top = (float)(near*std::tan(fov*0.5));
+    float top = near*((float)std::tan(fov*0.5));
     float bot = -top;
     float right = top*aspect;
     float left = -right;
@@ -178,4 +178,8 @@ mat4 lookat(vec3 eye, vec3 target,vec3 up) {
         dir.x,dir.y,dir.z,-dot(dir,eye),
         0,0,0,1
     );
+}
+
+float* valueptr(mat4 *a) {
+    return a->v;
 }

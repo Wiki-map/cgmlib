@@ -76,3 +76,14 @@ void vec2::normalize() {
 float dot(vec2 a,vec2 b) {
     return a.x * b.x + a.y*b.y;
 }
+
+vec2 normalize(vec2 a) {
+    float len = a.lenght();
+    return {a.x/len,a.y/len};
+}
+
+float* valueptr(vec2 *a) {
+    void* p = a;
+    float* r = (float*)a;
+    return r;
+}

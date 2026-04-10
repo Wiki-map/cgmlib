@@ -129,3 +129,14 @@ vec4& vec4::operator *=(mat4 r) {
     w = r.v[12] * x + r.v[13] * y + r.v[14] * z + r.v[15] * w;
     return *this;
 }
+
+vec4 normalize(vec4 a) {
+    float len = a.lenght();
+    return {a.x/len,a.y/len,a.z/len,a.w/len};
+}
+
+float* valueptr(vec4 *a) {
+    void* p = a;
+    float* r = (float*)a;
+    return r;
+}

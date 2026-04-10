@@ -136,6 +136,10 @@ float dot(vec2 a,vec2 b);
 float dot(vec3 a,vec3 b);
 float dot(vec4 a,vec4 b);
 
+vec2 normalize(vec2 a);
+vec3 normalize(vec3 a);
+vec4 normalize(vec4 a);
+
 vec3 cross(vec3 a,vec3 b);
 
 mat4 translate(float x,float y,float z);
@@ -145,3 +149,8 @@ mat4 ortho(float left,float right,float top,float bot,float near,float far);
 mat4 perspectiv(float fov,float aspect,float near,float far);
 
 mat4 lookat(vec3 eye, vec3 target,vec3 up);
+
+float* valueptr(vec2 *a);
+float* valueptr(vec3 *a);
+float* valueptr(vec4 *a);
+float* valueptr(mat4 *a);

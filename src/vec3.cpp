@@ -95,3 +95,14 @@ float dot(vec3 a,vec3 b) {
 vec3 cross(vec3 a,vec3 b) {
     return {a.y*b.z - a.z*b.y, a.z*b.x - a.x*b.z, a.x*b.y - a.y*b.x};
 }
+
+vec3 normalize(vec3 a) {
+    float len = a.lenght();
+    return {a.x/len,a.y/len,a.z/len};
+}
+
+float* valueptr(vec3 *a) {
+    void* p = a;
+    float* r = (float*)a;
+    return r;
+}
