@@ -82,8 +82,8 @@ struct vec4 {
     vec4();
     vec4(float all);
     vec4(float x,float y,float z,float w);
-    vec4(vec3,float w);
-    vec4(vec2,float z,float w);
+    vec4(vec2 a,float z,float w);
+    vec4(vec3 a,float w);
 
     vec4 operator +(const vec4 &b);
     vec4 operator -(const vec4 &b);
@@ -95,6 +95,7 @@ struct vec4 {
     vec4& operator -=(vec4 r);
 
     vec4& operator *=(float r);
+    vec4& operator *=(mat4 r);
     vec4& operator /=(float r);
 
     bool operator ==(vec4 r);
@@ -110,7 +111,7 @@ struct mat4 {
     float v[16];
 
     mat4();
-    mat4(float id);
+    mat4(float d);
     mat4(
         float m0,float m1,float m2,float m3,
         float m4,float m5,float m6,float m7,
