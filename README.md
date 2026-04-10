@@ -31,7 +31,7 @@ add_subdirectory(directory to cgm)
 ...
 target_link_libraries(your_project cgm)
 ```
-### or build it whit cmake
+### or build it with cmake
 ```
 >mkdir out
 >cd out
