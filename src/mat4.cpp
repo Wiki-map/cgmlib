@@ -142,7 +142,7 @@ mat4 ortho(float left,float right,float top,float bot,float near,float far) {
     return rez;
 }
 
-mat4 perspectiv(float fov,float aspect,float near,float far) {
+mat4 perspective(float fov,float aspect,float near,float far) {
     mat4 rez = mat4();
 
     float top = near*((float)std::tan(fov*0.5));
