@@ -145,7 +145,7 @@ mat4 ortho(float left,float right,float top,float bot,float near,float far) {
 mat4 perspectiv(float fov,float aspect,float near,float far) {
     mat4 rez = mat4();
 
-    float top = near*std::tan(fov*0.5);
+    float top = (float)(near*std::tan(fov*0.5));
     float bot = -top;
     float right = top*aspect;
     float left = -right;
@@ -169,6 +169,7 @@ mat4 lookat(vec3 eye, vec3 target,vec3 up) {
     vec3 dir = eye - target;
     dir.normalize();
     vec3 right = cross(up,dir);
+    right.normalize();
     vec3 upp = cross(dir,right);
 
     return mat4(
