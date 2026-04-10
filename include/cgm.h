@@ -144,4 +144,4 @@ mat4 scale(float x,float y,float z);
 mat4 ortho(float left,float right,float top,float bot,float near,float far);
 mat4 perspectiv(float fov,float aspect,float near,float far);
 
-mat4 view(vec3 pos, vec3 target,vec3 up);
+mat4 lookat(vec3 eye, vec3 target,vec3 up);

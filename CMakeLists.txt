@@ -276,3 +276,40 @@ add_test(
     NAME vec4dot
     COMMAND $<TARGET_FILE:vec4dot>
 )
+
+
+
+#mat4
+add_executable(mat4mul "${CMAKE_SOURCE_DIR}/tests/mat4/mat4mul.cpp")
+target_link_libraries(mat4mul cgmlib)
+
+add_test(
+    NAME mat4mul
+    COMMAND $<TARGET_FILE:mat4mul>
+)
+
+
+add_executable(mat4mulv "${CMAKE_SOURCE_DIR}/tests/mat4/mat4mulv.cpp")
+target_link_libraries(mat4mulv cgmlib)
+
+add_test(
+    NAME mat4mulv
+    COMMAND $<TARGET_FILE:mat4mulv>
+)
+
+
+add_executable(mat4eql "${CMAKE_SOURCE_DIR}/tests/mat4/mat4eql.cpp")
+target_link_libraries(mat4eql cgmlib)
+
+add_test(
+    NAME mat4eql
+    COMMAND $<TARGET_FILE:mat4eql>
+)
+
+add_executable(mat4neql "${CMAKE_SOURCE_DIR}/tests/mat4/mat4neql.cpp")
+target_link_libraries(mat4neql cgmlib)
+
+add_test(
+    NAME mat4neql
+    COMMAND $<TARGET_FILE:mat4neql>
+)
