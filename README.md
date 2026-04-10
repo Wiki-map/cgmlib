@@ -27,14 +27,14 @@ mat4 lookat(vec3 eye, vec3 target,vec3 up) -> look at matrix
 ## building
 ### you can add it to your project with
 ```cmake
-add_subdirectory(directory to cgm)
+add_subdirectory("directory to cgmlib")
 ...
-target_link_libraries(your_project cgm)
+target_link_libraries(your_project cgmlib)
 ```
 ### or build it with cmake
 ```
 >mkdir out
 >cd out
->cmake ../cgm-main
+>cmake ../cgmlib-main
 >cmake --build
 ```
