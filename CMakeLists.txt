@@ -7,9 +7,9 @@ add_library(cgmlib)
 target_include_directories(cgmlib PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
 target_sources(cgmlib PRIVATE "${MY_SOURCES}")
 
+option(TESTS "Add test" OFF)
 
-
-
+if(TESTS)
 # testing
 enable_testing()
 
@@ -313,3 +313,4 @@ add_test(
     NAME mat4neql
     COMMAND $<TARGET_FILE:mat4neql>
 )
+endif()

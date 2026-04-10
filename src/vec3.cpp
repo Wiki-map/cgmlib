@@ -1,4 +1,5 @@
 #include "cgm.h"
+#include <cmath>
 
 vec3::vec3() {
     x = 0;

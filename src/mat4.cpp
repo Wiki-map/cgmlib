@@ -1,4 +1,5 @@
 #include "cgm.h"
+#include <cmath>
 
 mat4::mat4() {
     for (int i=0; i<16; i++) {

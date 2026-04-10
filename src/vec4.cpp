@@ -1,4 +1,5 @@
 #include "cgm.h"
+#include <cmath>
 
 vec4::vec4() {
     x = 0;
